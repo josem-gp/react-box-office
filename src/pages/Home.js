@@ -5,13 +5,12 @@ const Home = () => {
   const [input, setInput] = useState("");
 
   const onInputChange = (event) => {
-    console.log(event);
-    console.log(event.target.value);
+    setInput(event.target.value);
   };
 
   return (
     <MainPageLayout>
-      <input type="text" onChange={onInputChange} />
+      <input type="text" onChange={onInputChange} value={input} />
     </MainPageLayout>
   );
 };
