@@ -16,9 +16,20 @@ const Home = () => {
       });
   };
 
+  const onKeyDown = (event) => {
+    if (event.keyCode === 13) {
+      onSearch();
+    }
+  };
+
   return (
     <MainPageLayout>
-      <input type="text" onChange={onInputChange} value={input} />
+      <input
+        type="text"
+        onChange={onInputChange}
+        onKeyDown={onKeyDown}
+        value={input}
+      />
       <button type="button" onClick={onSearch}></button>
     </MainPageLayout>
   );
