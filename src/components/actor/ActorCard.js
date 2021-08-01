@@ -1,8 +1,16 @@
 import React from "react";
 
-const ActorCard = ({ image, name, gender, country, birthday, deathday }) => {
+const ActorCard = ({
+  key,
+  image,
+  name,
+  gender,
+  country,
+  birthday,
+  deathday,
+}) => {
   return (
-    <div>
+    <div key={key}>
       <div>
         <img src={image} alt="actor" />
       </div>

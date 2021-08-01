@@ -6,7 +6,7 @@ import IMAGE_NOT_FOUND from "../../images/not-found.png";
 const ActorGrid = ({ data }) => {
   return (
     <div>
-      {data.map((person) => (
+      {data.map(({ person }) => (
         <ActorCard
           key={person.id}
           name={person.name}
@@ -14,7 +14,7 @@ const ActorGrid = ({ data }) => {
           birthday={person.birthday}
           deathday={person.deathday}
           gender={person.gender}
-          mage={person.image ? person.image.medium : IMAGE_NOT_FOUND}
+          image={person.image ? person.image.medium : IMAGE_NOT_FOUND}
         />
       ))}
     </div>
