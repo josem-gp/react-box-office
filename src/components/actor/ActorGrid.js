@@ -5,7 +5,6 @@ import { FlexGrid } from "../styled";
 
 import IMAGE_NOT_FOUND from "../../images/not-found.png";
 
-
 const ActorGrid = ({ data }) => {
   return (
     <FlexGrid>
@@ -20,7 +19,7 @@ const ActorGrid = ({ data }) => {
           image={person.image ? person.image.medium : IMAGE_NOT_FOUND}
         />
       ))}
-    </Flex>
+    </FlexGrid>
   );
 };
 
