@@ -1,6 +1,10 @@
 import React, { useEffect, useReducer } from "react";
 import { useParams } from "react-router-dom";
 import { apiGet } from "../misc/config";
+import Cast from "./show/Cast";
+import Details from "./show/Details";
+import Seasons from "./show/Seasons";
+import ShowMainData from "./show/ShowMainData";
 
 const reducer = (prevState, action) => {
   switch (action.type) {
@@ -68,7 +72,26 @@ const Show = () => {
   if (error) {
     return <div>Error ocurred</div>;
   }
-  return <div>This is show page</div>;
+  return (
+    <div>
+      <ShowMainData image={show.image} />
+
+      <div>
+        <h2>Details</h2>
+        <Details />
+      </div>
+
+      <div>
+        <h2>Seasons</h2>
+        <Seasons />
+      </div>
+
+      <div>
+        <h2>Cast</h2>
+        <Cast />
+      </div>
+    </div>
+  );
 };
 
 export default Show;
