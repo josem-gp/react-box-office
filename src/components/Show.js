@@ -93,7 +93,7 @@ const Show = () => {
 
       <div>
         <h2>Seasons</h2>
-        <Seasons />
+        <Seasons seasons={show._embedded.seasons} />
       </div>
 
       <div>
