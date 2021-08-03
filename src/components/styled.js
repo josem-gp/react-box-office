@@ -35,7 +35,7 @@ export const SearchCard = styled.div`
   }
 `;
 
-const Star = styled.div`
+export const Star = styled.div`
   display: inline-block;
   width: 18px;
   height: 18px;
