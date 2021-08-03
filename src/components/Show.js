@@ -98,7 +98,7 @@ const Show = () => {
 
       <div>
         <h2>Cast</h2>
-        <Cast />
+        <Cast cast={show._embedded.cast} />
       </div>
     </div>
   );
