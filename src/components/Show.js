@@ -84,7 +84,11 @@ const Show = () => {
 
       <div>
         <h2>Details</h2>
-        <Details />
+        <Details
+          status={show.status}
+          network={show.network}
+          premiered={show.premiered}
+        />
       </div>
 
       <div>
