@@ -74,7 +74,13 @@ const Show = () => {
   }
   return (
     <div>
-      <ShowMainData image={show.image} />
+      <ShowMainData
+        image={show.image}
+        name={show.name}
+        rating={show.rating}
+        summary={show.summary}
+        tags={show.genres}
+      />
 
       <div>
         <h2>Details</h2>
